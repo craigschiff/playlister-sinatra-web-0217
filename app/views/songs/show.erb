@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Song Details</title>
+  </head>
+  <body>
+    <p>
+      Successfully created song.
+      Song Name: <%= @song.name %>
+
+    </p>
+
+
+    <p>
+      Artist: <%= @artist.name %>
+      Artist page: <a href="/artists/<%= @artist.slug %>">
+    </p>
+    <p>
+      <% if !@song.genres.empty?
+        @song.genres.each do |genre| %>
+      Genre: <%= genre.name %><br />
+      Genre page: <a href="/genres/<%= genre.slug %>"><br>
+    </p>
+    <% end %>
+    <% end %>
+
+
+
+
+  </body>
+</html>

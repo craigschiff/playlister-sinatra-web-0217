@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if !@genre.songs.empty?
+      @genre.songs.each do |song| %>
+      <%= song.name %><br />
+      <a href="/songs/<%= song.slug %>"<br />
+        <% end %>
+        <% end %>
+
+      <% if !@genre.artists.empty?
+        @genre.artists.each do |artist| %>
+        <%= artist.name %><br />
+        <a href="/artists/<%= artist.slug %>"<br />
+          <% end %>
+          <% end %>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <label>Artists are listed below: </label><br>
+    <% @artists.each do |artist| %>
+    <p>Name: <%= artist.name %></p>
+    <p>
+      Link: <a href="/artists/<%= artist.slug %>">
+    </p><br />
+    <% end %>
+
+  </body>
+</html>
